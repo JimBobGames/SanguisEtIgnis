@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32328.378
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SanguisEtIgnis", "SanguisEtIgnis\SanguisEtIgnis.csproj", "{3ED46B06-D942-4B96-AA31-2568572FC0C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SanguisEtIgnis.Core", "SanguisEtIgnis.Core\SanguisEtIgnis.Core.csproj", "{3427C72D-7743-4559-B8C6-19C1E62B7475}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3ED46B06-D942-4B96-AA31-2568572FC0C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3ED46B06-D942-4B96-AA31-2568572FC0C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3ED46B06-D942-4B96-AA31-2568572FC0C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3ED46B06-D942-4B96-AA31-2568572FC0C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3427C72D-7743-4559-B8C6-19C1E62B7475}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3427C72D-7743-4559-B8C6-19C1E62B7475}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3427C72D-7743-4559-B8C6-19C1E62B7475}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3427C72D-7743-4559-B8C6-19C1E62B7475}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {031529E6-BA0B-4414-B356-03B3EDB4E0B4}
+	EndGlobalSection
+EndGlobal
