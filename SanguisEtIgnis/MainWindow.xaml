@@ -4,9 +4,19 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SanguisEtIgnis"
+        xmlns:CustomControls="clr-namespace:SanguisEtIgnis.CustomControls" 
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded" ResizeMode="CanMinimize" WindowState="Maximized" WindowStartupLocation="CenterScreen" >
+
+
+
+    <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+        <DockPanel >
+           
+
+            <CustomControls:PanAndZoomCanvas Background="LightGreen" x:Name="MainWindowCanvas" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" />
+
+        </DockPanel>
 
     </Grid>
 </Window>
