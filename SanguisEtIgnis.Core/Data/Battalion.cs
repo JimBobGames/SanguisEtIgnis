@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SanguisEtIgnis.Core.Data
 {
-    public class Battalion
+    public class Battalion : BaseUnit
     {
     }
 }
