@@ -14,6 +14,9 @@ namespace SanguisEtIgnis.Test
             Assert.AreEqual("Smith", c.Name);
             c.Name = "Bloggs";
             Assert.AreEqual("Bloggs", c.Name);
+            // remove the name override
+            c.Name = "";
+            Assert.AreEqual("Smith", c.Name);
         }
     }
 }
