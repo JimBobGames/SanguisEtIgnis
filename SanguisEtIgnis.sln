@@ -7,7 +7,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SanguisEtIgnis", "SanguisEt
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SanguisEtIgnis.Core", "SanguisEtIgnis.Core\SanguisEtIgnis.Core.csproj", "{3427C72D-7743-4559-B8C6-19C1E62B7475}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SanguisEtIgnis.Test", "SanguisEtIgnis.Test\SanguisEtIgnis.Test.csproj", "{554C695B-C035-4250-ABE2-4AE64DE79ACD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SanguisEtIgnis.Test", "SanguisEtIgnis.Test\SanguisEtIgnis.Test.csproj", "{554C695B-C035-4250-ABE2-4AE64DE79ACD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B1B0D613-E065-469D-B435-7C20FD6E016E}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -9,7 +9,7 @@ namespace SanguisEtIgnis.Core.Data
     public abstract class BaseUnit : NamedObject
     {
         public Officer? Officer { get; set; }
-
+        /*
         public string Name {
             get
             {
@@ -29,6 +29,7 @@ namespace SanguisEtIgnis.Core.Data
             {
                 Name = value;
             }
-        }   
+        } 
+        */
     }
 }
