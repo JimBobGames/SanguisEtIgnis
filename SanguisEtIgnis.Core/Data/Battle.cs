@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace SanguisEtIgnis.Core.Data
 {
-    public class xCommander : Officer
+    public class Battle
     {
+        public enum Weather { Clear, Wet, Snow };
+        public enum Terrain { Clear, LightCover, HeavyCover, Fortifications };
     }
 }

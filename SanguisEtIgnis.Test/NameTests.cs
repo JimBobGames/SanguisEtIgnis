@@ -9,7 +9,7 @@ namespace SanguisEtIgnis.Test
         [TestMethod]
         public void TestNameOverrides()
         {
-            Commander c = new Commander() { ShortName = "Smith", LongName = "Fred Smith" };
+            Officer c = new Officer() { ShortName = "Smith", LongName = "Fred Smith" };
             Assert.AreEqual("Smith", c.ShortName);
             Assert.AreEqual("Smith", c.Name);
             c.Name = "Bloggs";

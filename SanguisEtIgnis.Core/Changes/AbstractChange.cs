@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SanguisEtIgnis.Core.Data
+namespace SanguisEtIgnis.Core.Changes
 {
-    public class xCommander : Officer
+    public class AbstractChange
     {
+        public int TurnNumber { get; set; }
     }
+
 }

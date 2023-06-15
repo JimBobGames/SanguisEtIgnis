@@ -8,7 +8,7 @@ namespace SanguisEtIgnis.Core.Data
 {
     public abstract class BaseUnit : NamedObject
     {
-        public Commander? Commander { get; set; }
+        public Officer? Officer { get; set; }
 
         public string Name {
             get
@@ -18,9 +18,9 @@ namespace SanguisEtIgnis.Core.Data
                 {
                     return Name;
                 }
-                if (Commander != null && !string.IsNullOrEmpty(Commander.Name))
+                if (Officer != null && !string.IsNullOrEmpty(Officer.Name))
                 {
-                    return Commander.Name;
+                    return Officer.Name;
                 }
                 return "Unknown Name";
             }

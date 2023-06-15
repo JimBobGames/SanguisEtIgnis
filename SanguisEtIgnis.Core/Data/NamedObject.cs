@@ -9,6 +9,7 @@ namespace SanguisEtIgnis.Core.Data
     public class NamedObject
     {
         private string name = "";
+        private string shortName = "";
 
         public virtual string Name
         {
@@ -25,6 +26,24 @@ namespace SanguisEtIgnis.Core.Data
                 else
                 {
                     name = value;
+                }
+            }
+        }
+        public virtual string ShortName
+        {
+            get
+            {
+                return shortName;
+            }
+            set
+            {
+                if (value == null)
+                {
+                    shortName = "";
+                }
+                else
+                {
+                    shortName = value;
                 }
             }
         }

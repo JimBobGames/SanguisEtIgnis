@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace SanguisEtIgnis.Core.Data
 {
-    public class xCommander : Officer
+    public class Nation : NamedObject
     {
+        public int NationId { get; set; }
+
     }
 }

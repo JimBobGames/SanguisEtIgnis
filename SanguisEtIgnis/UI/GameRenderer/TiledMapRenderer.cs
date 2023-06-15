@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SanguisEtIgnis.Core.Data
+namespace SanguisEtIgnis.UI.GameRenderer
 {
-    public class xCommander : Officer
+    public class TiledMapRenderer2
+    {
+    }
+    public class TiledMapRenderer
     {
     }
 }
