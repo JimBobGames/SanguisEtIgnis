@@ -24,5 +24,13 @@ namespace SanguisEtIgnis.Core.Data
 
             return c;
         }
+
+        public override string UnitSizeText
+        {
+            get
+            {
+                return "XX";
+            }
+        }
     }
 }

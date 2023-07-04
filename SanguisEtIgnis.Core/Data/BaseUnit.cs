@@ -9,6 +9,8 @@ namespace SanguisEtIgnis.Core.Data
     public abstract class BaseUnit : NamedObject
     {
         public Officer? Officer { get; set; }
+
+        public abstract string UnitSizeText { get; }
         /*
         public string Name {
             get

@@ -54,7 +54,6 @@ namespace SanguisEtIgnis.Core.Data
         public bool IsDirty { get; set; } // the regiments needs redrawing or perhaps a network update ?? 
 
         public List<MovementOrders> MovementOrders { get; set; }
-        public Officer Officer { get; set; }
 
         public int CurrentWidth
         {
@@ -69,6 +68,14 @@ namespace SanguisEtIgnis.Core.Data
             get
             {
                 return 100;
+            }
+        }
+
+        public override string UnitSizeText
+        {
+            get
+            {
+                return "II";
             }
         }
 

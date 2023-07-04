@@ -36,6 +36,10 @@ namespace SanguisEtIgnis.UI
             this.game = game;
             this.ClipToBounds = false;
             this.controller = controller;
+
+            lock (m_sync)
+                m_dpiInfo = VisualTreeHelper.GetDpi(this);
+
             UpdateGameVisuals();
 
             // Add the event handler for MouseLeftButtonUp.
@@ -108,7 +112,7 @@ namespace SanguisEtIgnis.UI
         {
             if (changes != null)
             {
-                // redraw any regimentd
+                // redraw any battalions
                 foreach (int rid in changes.BattalionIds.ToList())
                 {
                     Battalion r = game.GetBattalion(rid);
@@ -213,6 +217,26 @@ namespace SanguisEtIgnis.UI
 
         }
 
+        private DpiScale m_dpiInfo;
+        private readonly object m_sync = new object();
+
+        private Size MeasureString(string candidate)
+        {
+            DpiScale dpiInfo;
+            lock (m_sync)
+                dpiInfo = m_dpiInfo;
+
+            var formattedText = new FormattedText(candidate, CultureInfo.CurrentUICulture,
+                                                  FlowDirection.LeftToRight,
+                                                  new Typeface("Verdana"),
+                                                  8,
+                                                  Brushes.Black,
+                                                  dpiInfo.PixelsPerDip);
+
+            return new Size(formattedText.Width, formattedText.Height);
+        }
+
+
         private void DrawBattalion(DrawingContext dc, Battalion r)
         {
             int width = r.GetWidthInPaces();
@@ -225,9 +249,9 @@ namespace SanguisEtIgnis.UI
             int y = r.MapY;
             int angle = r.FacingInDegrees;
 
-            r.ShortName = DateTime.Now.ToLongTimeString();
+            //r.ShortName = DateTime.Now.ToLongTimeString();
 
-            dc.PushTransform(new RotateTransform(angle, x + halfwidth, y));
+            //dc.PushTransform(new RotateTransform(angle, x + halfwidth, y));
 
             // Create a rectangle and draw it in the DrawingContext.
             Rect rect = new Rect(new System.Windows.Point(x, y), new System.Windows.Size(width, height));
@@ -242,20 +266,56 @@ namespace SanguisEtIgnis.UI
             dc.DrawRectangle(System.Windows.Media.Brushes.Red, (System.Windows.Media.Pen)null, rect3);
             */
 
+           
+
             dc.DrawText(
 
 
-           new FormattedText(r.ShortName,
+           new FormattedText(DateTime.Now.ToLongTimeString(),
               CultureInfo.GetCultureInfo("en-us"),
               FlowDirection.LeftToRight,
               new Typeface("Verdana"),
               12, System.Windows.Media.Brushes.Black),
               new System.Windows.Point(x, y + height));
 
+            int counterHeight = 50;
+            int counterWidth = 50;
+            int counterHalfHeight = counterHeight/2;
+            int counterHalfWidth = counterWidth/2;
+            Brush counterBrush = System.Windows.Media.Brushes.RoyalBlue;
+            Brush counterTextBrush = System.Windows.Media.Brushes.White;
+
+            Rect counterRect = new Rect(new System.Windows.Point(x- counterHalfWidth, y - counterHalfHeight ), 
+                new System.Windows.Size(counterHeight, counterWidth));
+            dc.DrawRectangle(counterBrush, null, counterRect);
+
+            Size teztSize = MeasureString(r.UnitSizeText);
 
 
-            dc.Pop();
+            dc.DrawText(
+            new FormattedText(r.UnitSizeText,
+            CultureInfo.GetCultureInfo("en-us"),
+            FlowDirection.LeftToRight,
+            new Typeface("Verdana"),
+            8, System.Windows.Media.Brushes.Black),
+             new System.Windows.Point(x - (teztSize.Width/2), y - counterHalfHeight + teztSize.Height));
+
+            teztSize = MeasureString(r.ShortName);
+            dc.DrawText(
+           new FormattedText(r.ShortName,
+                CultureInfo.GetCultureInfo("en-us"),
+                FlowDirection.LeftToRight,
+                new Typeface("Verdana"),
+                8, System.Windows.Media.Brushes.Black),
+                new System.Windows.Point(x - (teztSize.Width / 2), y - counterHalfHeight + (2 *  teztSize.Height)));
+
+
+            Rect centerRect = new Rect(new System.Windows.Point(x-1, y-1), new System.Windows.Size(5, 5));
+            dc.DrawRectangle(System.Windows.Media.Brushes.Red, (System.Windows.Media.Pen)null, centerRect);
+
+           // dc.Pop();
         }
+
         private DrawingVisual CreateBrigadeDrawingVisual(Brigade b)
         {
             DrawingVisual drawingVisual = new DrawingVisual();
