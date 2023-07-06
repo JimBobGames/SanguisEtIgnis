@@ -13,6 +13,10 @@ namespace SanguisEtIgnis.Core.Network
         {
             get;
         }
+        Dictionary<int, Nation> Nations
+        {
+            get;
+        }
         Battalion SelectedBattalion { get; set; }
 
         Battalion GetBattalion(int battalionId);

@@ -10,7 +10,13 @@
     <Compile Update="CustomControls\GalaxyMapControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="CustomControls\NationsControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="CustomControls\PanAndZoomCanvas.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="CustomControls\SolarSystemsControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="TabbedWindow.xaml.cs">
@@ -21,7 +27,13 @@
     <Page Update="CustomControls\GalaxyMapControl.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="CustomControls\NationsControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="CustomControls\PanAndZoomCanvas.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="CustomControls\SolarSystemsControl.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">

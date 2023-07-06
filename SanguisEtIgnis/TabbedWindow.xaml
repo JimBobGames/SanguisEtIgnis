@@ -14,17 +14,36 @@
                 <Button Name="btnNextTab" Click="btnTab_Click">Next</Button>
                 <Button Name="btnSelectedTab" Click="btnTab_Click">Selected</Button>
             </StackPanel>
-            <TabControl Name="tcSample">
+            <TabControl Name="MainTabControl">
                 <TabItem>
                 <TabItem.Header>
                     <StackPanel Orientation="Horizontal">
-                        <Image Source="/WpfTutorialSamples;component/Images/bullet_blue.png" />
-                        <TextBlock Text="Blue" Foreground="Blue" />
+                        <Image Source="/Images/blue16.png" Height="16" Width="16" />
+                        <TextBlock Text="Galaxy Map" Foreground="Blue" />
                     </StackPanel>
                 </TabItem.Header>
+                <CustomControls:GalaxyMapControl Background="LightGreen" x:Name="GalaxyMapTab" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" />
 
-                </TabItem>
-                <TabItem Header="Security" />
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Images/blue16.png" Height="16" Width="16" />
+                        <TextBlock Text="Nations" Foreground="Blue" />
+                    </StackPanel>
+                </TabItem.Header>
+                <CustomControls:NationsControl Background="LightCoral" x:Name="NationsTab" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" />
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Images/blue16.png" Height="16" Width="16" />
+                        <TextBlock Text="Solar Systems" Foreground="Blue" />
+                    </StackPanel>
+                </TabItem.Header>
+                <CustomControls:SolarSystemsControl Background="LightBlue" x:Name="SolarSystemsTab" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" />
+            </TabItem>
+            <TabItem Header="Security" />
                 <TabItem Header="Details" />
             </TabControl>
 

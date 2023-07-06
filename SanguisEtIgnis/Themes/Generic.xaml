@@ -4,10 +4,10 @@
     xmlns:local="clr-namespace:SanguisEtIgnis">
 
 
-    <Style TargetType="{x:Type local:GalaxyMapControl}">
+    <Style TargetType="{x:Type local:CustomControls.GalaxyMapControl}">
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type local:GalaxyMapControl}">
+                <ControlTemplate TargetType="{x:Type local:CustomControls.GalaxyMapControl}">
                     <Border Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}">

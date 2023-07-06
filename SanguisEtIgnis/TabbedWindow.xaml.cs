@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SanguisEtIgnis.Core.Network;
+using SanguisEtIgnis.UI;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +21,21 @@ namespace SanguisEtIgnis
     /// </summary>
     public partial class TabbedWindow : Window
     {
+        private static StandaloneSanguisEtIgnisGame game;
+        private Controller controller;
+
         public TabbedWindow()
         {
             InitializeComponent();
+
+            // create the game
+            game = new StandaloneSanguisEtIgnisGame();
+            TinyGameCreator.CreateGame(game);
+            controller = new Controller() { Game = game };
+
+            // set the bindings
+            this.NationsTab.NationsGrid.DataContext = game.Nations.Values;
+
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -30,10 +44,10 @@ namespace SanguisEtIgnis
 
         private void btnTab_Click(object sender, RoutedEventArgs e)
         {
-            int newIndex = tcSample.SelectedIndex - 1;
+            int newIndex = MainTabControl.SelectedIndex - 1;
             if (newIndex < 0)
-                newIndex = tcSample.Items.Count - 1;
-            tcSample.SelectedIndex = newIndex;
+                newIndex = MainTabControl.Items.Count - 1;
+            MainTabControl.SelectedIndex = newIndex;
         }
     }
 }

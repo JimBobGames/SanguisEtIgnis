@@ -60,6 +60,13 @@ namespace SanguisEtIgnis.Core.Network
                 return armies;
             }
         }
+        public Dictionary<int, Nation> Nations
+        {
+            get
+            {
+                return nations;
+            }
+        }
 
         internal Player AddPlayer(Player p)
         {
