@@ -8,10 +8,26 @@ using System.Threading.Tasks;
 
 namespace SanguisEtIgnis.Core.Network
 {
+    public static class ListHelper
+    {
+        ///
+        /// Shuffles the specified list into a random order.
+        ///
+        /// The type of the list items
+        /// The list of items.
+        /// A randomised list of the items.
+        public static IEnumerable<T> Randomize<T>(this IEnumerable<T> source)
+        {
+            Random rnd = new Random();
+            return source.OrderBy<T, int>((item) => rnd.Next());
+        }
+    }
+
     public class SanguisEtIgnisGame : ISanguisEtIgnisGame
     {
         private Dictionary<int, Player> players = new Dictionary<int, Player>();
         private Dictionary<int, Nation> nations = new Dictionary<int, Nation>();
+        private Dictionary<int, SolarSystem> solarSystems = new Dictionary<int, SolarSystem>();
         private Dictionary<int, Army> armies = new Dictionary<int, Army>();
         private Dictionary<int, Battalion> battalions = new Dictionary<int, Battalion>();
 
@@ -68,6 +84,14 @@ namespace SanguisEtIgnis.Core.Network
             }
         }
 
+        public Dictionary<int, SolarSystem> SolarSystems
+        {
+            get
+            {
+                return solarSystems;
+            }
+        }
+
         internal Player AddPlayer(Player p)
         {
             players[p.PlayerId] = p;
@@ -78,6 +102,14 @@ namespace SanguisEtIgnis.Core.Network
         internal Nation AddNation(Nation n)
         {
             nations[n.NationId] = n;
+
+            return n;
+        }
+
+
+        internal SolarSystem AddSolarSystem(SolarSystem n)
+        {
+            solarSystems[n.SolarSystemId] = n;
 
             return n;
         }
@@ -103,5 +135,22 @@ namespace SanguisEtIgnis.Core.Network
             return r;
         }
 
+        public IReadOnlyList<Nation> NationsListUnsorted => nations.Values.ToList();
+        public IReadOnlyList<Nation> NationsListAlphabetical => new List<Nation>(nations.Values.ToList()).OrderBy(o => o.Name).ToList();
+        public IReadOnlyList<Nation> NationsListRandom => new List<Nation>(ListHelper.Randomize(nations.Values.ToList()));
+        public Nation GetNation(int id)
+        {
+            Nations.TryGetValue(id, out Nation value);
+            return value;
+        }
+
+        public IReadOnlyList<SolarSystem> SolarSystemsListUnsorted => solarSystems.Values.ToList();
+        public IReadOnlyList<SolarSystem> SolarSystemsListAlphabetical => new List<SolarSystem>(solarSystems.Values.ToList()).OrderBy(o => o.Name).ToList();
+        public IReadOnlyList<SolarSystem> SolarSystemsListRandom => new List<SolarSystem>(ListHelper.Randomize(solarSystems.Values.ToList()));
+        public SolarSystem GetSolarSystem(int id)
+        {
+            SolarSystems.TryGetValue(id, out SolarSystem value);
+            return value;
+        }
     }
 }

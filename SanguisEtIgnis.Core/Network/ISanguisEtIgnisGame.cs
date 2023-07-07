@@ -17,6 +17,20 @@ namespace SanguisEtIgnis.Core.Network
         {
             get;
         }
+
+        IReadOnlyList<Nation> NationsListUnsorted { get; }
+        IReadOnlyList<Nation> NationsListAlphabetical { get; }
+        Nation GetNation(int id);
+
+        Dictionary<int, SolarSystem> SolarSystems
+        {
+            get;
+        }
+
+        IReadOnlyList<SolarSystem> SolarSystemsListUnsorted { get; }
+        IReadOnlyList<SolarSystem> SolarSystemsListAlphabetical { get; }
+        SolarSystem GetSolarSystem(int id);
+
         Battalion SelectedBattalion { get; set; }
 
         Battalion GetBattalion(int battalionId);

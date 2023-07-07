@@ -21,7 +21,7 @@ namespace SanguisEtIgnis
     /// </summary>
     public partial class TabbedWindow : Window
     {
-        private static StandaloneSanguisEtIgnisGame game;
+        public static StandaloneSanguisEtIgnisGame game;
         private Controller controller;
 
         public TabbedWindow()
@@ -34,12 +34,14 @@ namespace SanguisEtIgnis
             controller = new Controller() { Game = game };
 
             // set the bindings
-            this.NationsTab.NationsGrid.DataContext = game.Nations.Values;
+           this.NationsTab.NationsListView.ItemsSource = game.NationsListAlphabetical;
+           this.SolarSystemsTab.SolarSystemsListView.ItemsSource = game.SolarSystemsListAlphabetical;
 
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            //this.NationsTab.DataContext = game.NationsListAlphabetical;
         }
 
         private void btnTab_Click(object sender, RoutedEventArgs e)

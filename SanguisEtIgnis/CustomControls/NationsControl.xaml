@@ -9,13 +9,13 @@
     <DockPanel>
         <Label Content="nations goes here..." DockPanel.Dock="Top"/>
         <Label Content="nations goes here..." DockPanel.Dock="Bottom"/>
-        <ListView Name="NationsGrid">
+        <ListView Name="NationsListView">
 
             <ListView.View>
 
                 <GridView  AllowsColumnReorder="False" ColumnHeaderToolTip="Nations Information">
 
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=Name}" Header="First Name" Width="100"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Name}" Header="Name" Width="100"/>
 
                     <GridViewColumn DisplayMemberBinding="{Binding Path=LastName}" Width="100">
                         <GridViewColumnHeader>Last Name

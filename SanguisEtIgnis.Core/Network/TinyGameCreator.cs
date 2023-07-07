@@ -22,6 +22,9 @@ namespace SanguisEtIgnis.Core.Network
             g.AddNation(new Nation() { NationId = NATION_USA, Name = "Union" });
             g.AddNation(new Nation() { NationId = NATION_CSA, Name = "Conferderacy" });
 
+            // create the solar systems
+            g.AddSolarSystem(new SolarSystem() { SolarSystemId = NATION_USA, Name = "Sol" });
+            g.AddSolarSystem(new SolarSystem() { SolarSystemId = NATION_CSA, Name = "Orion" });
 
         }
     }
