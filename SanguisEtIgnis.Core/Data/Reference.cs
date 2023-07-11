@@ -10,11 +10,11 @@ namespace SanguisEtIgnis.Core.Data
     {
         private Reference() { }
 
-        private Dictionary<int, Weapon> weapons = new Dictionary<int, Weapon>();
+        private Dictionary<int, WeaponOld> weapons = new Dictionary<int, WeaponOld>();
 
         private Dictionary<int, Doctrine> doctrines = new Dictionary<int, Doctrine>();
 
-        private static Reference _instance;
+        private static Reference? _instance;
 
         public static Reference GetInstance()
         {
@@ -62,7 +62,7 @@ namespace SanguisEtIgnis.Core.Data
             */
         }
 
-        public Dictionary<int, Weapon> Weapons
+        public Dictionary<int, WeaponOld> Weapons
         { get { return weapons; } }
 
         public Dictionary<int, Doctrine> Doctrines

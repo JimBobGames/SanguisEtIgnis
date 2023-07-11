@@ -141,7 +141,7 @@ namespace SanguisEtIgnis.Core.Data
             throw new NotImplementedException();
         }
 
-        public Weapon GetWeapon()
+        public WeaponOld GetWeapon()
         {
             return Reference.GetInstance().Weapons[WeaponId];
         }

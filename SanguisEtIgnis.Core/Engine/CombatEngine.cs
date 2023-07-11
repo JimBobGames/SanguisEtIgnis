@@ -70,7 +70,7 @@ namespace SanguisEtIgnis.Core.Engine
             return result;
         }
 
-        public int DoFireWeapon(Weapon w, int distance, int numFirers)
+        public int DoFireWeapon(WeaponOld w, int distance, int numFirers)
         {
             int rangeSteps = distance / 50;
             /*

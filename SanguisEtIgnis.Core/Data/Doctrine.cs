@@ -36,7 +36,7 @@ public abstract class Doctrine : NamedObject
 
     public int DoFireWeapon(Battalion firer, Battalion target, Engagement e)
     {
-        Weapon w = firer.GetWeapon();
+        WeaponOld w = firer.GetWeapon();
         int accuracy = w.Accuracy;
 
         if (e.Distance <= 0)
@@ -61,6 +61,7 @@ public abstract class Doctrine : NamedObject
         hits = (hits * percent) / 100;
 
         return hits;
+            
     }
 }
 
@@ -74,7 +75,7 @@ public class AdvancePointBlankVolleyCharge : Doctrine
     public override int GetMoveDistance(Engagement e, Battalion r)
     {
         // have we reached the distance for our volley
-        Weapon w = e.Attacker.GetWeapon();
+        WeaponOld w = e.Attacker.GetWeapon();
 
         // are we at 50 yards ???
         if (e.Distance <= 100)
@@ -120,7 +121,7 @@ public class AdvanceEffectiveVolleyCharge : Doctrine
     public override int GetMoveDistance(Engagement e, Battalion r)
     {
         // have we reached the distance for our volley
-        Weapon w = r.GetWeapon();
+        WeaponOld w = r.GetWeapon();
         int effectiveRange = w.EffectiveRange;
 
         // are we at effective range yards ???
@@ -168,7 +169,7 @@ public class AdvanceEffectiveVolleyCharge : Doctrine
         public override int GetMoveDistance(Engagement e, Battalion r)
         {
             // have we reached the distance for our volley
-            Weapon w = e.Attacker.GetWeapon();
+            WeaponOld w = e.Attacker.GetWeapon();
             int effectiveRange = w.EffectiveRange;
 
             // are we at effective range yards ???

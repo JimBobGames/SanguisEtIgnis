@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SanguisEtIgnis.Core.Data
 {
-    public class Weapon : NamedObject
+    public class WeaponOld : NamedObject
     {
         public int WeaponId { get; set; }
         public int Year { get; set; }

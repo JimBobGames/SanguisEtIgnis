@@ -6,10 +6,15 @@ using System.Threading.Tasks;
 
 namespace SanguisEtIgnis.Core.Data
 {
-    public class NamedObject
+    public class NamedObject : IComparable<NamedObject>
     {
         private string name = "";
         private string shortName = "";
+
+        public int CompareTo(NamedObject other)
+        {
+            return Name.CompareTo(other.Name);
+        }
 
         public virtual string Name
         {

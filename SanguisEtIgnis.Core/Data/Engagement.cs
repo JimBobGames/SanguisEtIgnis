@@ -17,7 +17,7 @@ namespace SanguisEtIgnis.Core.Data
         public enum EngagementResult { Engaged, AttackerWin, DefenderWins, Draw };
 
         private List<Battalion> defenders = new List<Battalion>();
-        public Battalion Attacker { get; set; }
+        public Battalion? Attacker { get; set; }
         public List<Battalion> Defenders
         {
             get
