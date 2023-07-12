@@ -13,6 +13,7 @@ namespace SanguisEtIgnis.Core.Data
     public class SolarSystem : NamedObject
     {
         public int SolarSystemId { get; set; }
+        public Point Location { get; set; }
 
         public StarType StarType { get; set; }
 

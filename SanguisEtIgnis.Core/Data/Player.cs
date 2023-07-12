@@ -9,5 +9,6 @@ namespace SanguisEtIgnis.Core.Data
     public class Player : NamedObject
     {
         public int PlayerId { get; set; }
+        public Nation Nation { get; set; }
     }
 }

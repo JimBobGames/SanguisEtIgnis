@@ -21,7 +21,7 @@ namespace SanguisEtIgnis
     /// </summary>
     public partial class TabbedWindow : Window
     {
-        public static StandaloneSanguisEtIgnisGame game;
+        public static SanguisEtIgnisGame game;
         private Controller controller;
 
         public TabbedWindow()
@@ -29,8 +29,7 @@ namespace SanguisEtIgnis
             InitializeComponent();
 
             // create the game
-            game = new StandaloneSanguisEtIgnisGame();
-            TinyGameCreator.CreateGame(game);
+            game = TinyGameCreator.CreateGame();
             controller = new Controller() { Game = game };
 
             // set the bindings
