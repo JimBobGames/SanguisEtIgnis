@@ -383,6 +383,32 @@ namespace SanguisEtIgnis.Core.Network
             Engines[engine.ModuleId] = engine;
         }
 
+        internal Hull AddHull(Hull h)
+        {
+            Hulls[h.HullId] = h;
+
+            return h;
+        }
+
+        public Shield AddShield(Shield shield)
+        {
+            if (shield != null)
+            {
+                shields[shield.ModuleId] = shield;
+            }
+
+            return shield;
+        }
+        public Armour AddArmour(Armour a)
+        {
+            if (a != null)
+            {
+                armour[a.ModuleId] = a;
+            }
+
+            return a;
+        }
+
         /// <summary>
         /// The store of designs
         /// </summary>

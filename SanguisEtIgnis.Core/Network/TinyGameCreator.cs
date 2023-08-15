@@ -124,9 +124,6 @@ namespace SanguisEtIgnis.Core.Network
             game.AddDesign(CreateDesign(GameStandardIds.TERRAN_ESCORT_DESIGNID, "Terran Escort", escortHull, militaryEngine, 1));
             game.AddDesign(CreateDesign(GameStandardIds.TERRAN_FRIGATE_DESIGNID, "Terran Frigate", frigateHull, militaryEngine, 1));
             game.AddDesign(CreateDesign(GameStandardIds.TERRAN_DESTROYER_DESIGNID, "Terran Destoyer", destroyerHull, militaryEngine, 1));
-            //g.CreateDesign(TERRAN_DESTROYER_DESIGNID, "Terran Destroyer", 4);
-            //g.CreateDesign(TERRAN_DESTROYER_DESIGNID, "Terran Destroyer", 4);
-            //g.CreateDesign(ORION_DESTROYER_DESIGNID, "Orion Destroyer", 4);
         }
 
         private static Design CreateDesign(int id, string name, Hull h, Engine e, int numEngines)

@@ -77,7 +77,7 @@ namespace SanguisEtIgnis.Core.Engines
             foreach (SolarSystem ss in n.KnownSolarSystems)
             {
                 // is this system explored ??
-                if (ss.IsExplored(n))
+                if (ss != null && ss.IsExplored(n))
                 {
 
                 }

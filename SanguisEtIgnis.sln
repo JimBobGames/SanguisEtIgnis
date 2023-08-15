@@ -14,6 +14,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.editorconfig = .editorconfig
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SanguisEtIgnis.SDL", "SanguisEtIgnis.SDL\SanguisEtIgnis.SDL.csproj", "{E5BD02D7-201E-498B-BD43-167C942F5A92}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SanguisEtIgnis.Core2", "SanguisEtIgnis.Core2\SanguisEtIgnis.Core2.csproj", "{5D8504CF-E92E-43B9-BB86-F9866240772C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +36,14 @@ Global
 		{554C695B-C035-4250-ABE2-4AE64DE79ACD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{554C695B-C035-4250-ABE2-4AE64DE79ACD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{554C695B-C035-4250-ABE2-4AE64DE79ACD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5BD02D7-201E-498B-BD43-167C942F5A92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5BD02D7-201E-498B-BD43-167C942F5A92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5BD02D7-201E-498B-BD43-167C942F5A92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5BD02D7-201E-498B-BD43-167C942F5A92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D8504CF-E92E-43B9-BB86-F9866240772C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D8504CF-E92E-43B9-BB86-F9866240772C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D8504CF-E92E-43B9-BB86-F9866240772C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D8504CF-E92E-43B9-BB86-F9866240772C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
